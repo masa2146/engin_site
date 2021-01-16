@@ -1,0 +1,80 @@
+.swiper-gallery {
+	position: fixed;
+	display: none;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999999;
+}
+.swiper-gallery .swiper-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	max-width: 100%;
+	max-height: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 10;
+}
+.swiper-gallery .swiper-slide img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	max-width: 100%;
+	max-height: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.swiper-gallery .swiper-button-prev,
+.swiper-gallery .swiper-button-next {
+	margin-top: -32px;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 27px 44px;
+	box-sizing: content-box;
+	opacity: 0.3;
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s;
+	z-index: 20;
+}
+.swiper-gallery .swiper-container:hover .swiper-button-prev:not(.swiper-button-disabled),
+.swiper-gallery .swiper-container:hover .swiper-button-next:not(.swiper-button-disabled) {
+	opacity: 0.7;
+}
+.swiper-gallery .swiper-container .swiper-button-prev:not(.swiper-button-disabled):hover,
+.swiper-gallery .swiper-container .swiper-button-next:not(.swiper-button-disabled):hover {
+	opacity: 1;
+}
+.swiper-gallery .swiper-button-prev {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+	left: 0;
+}
+.swiper-gallery .swiper-button-next {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+	right: 0;
+}
+.swiper-gallery .swiper-pagination {
+	z-index: 20;
+}
+.swiper-gallery .swiper-pagination-bullet-active {
+	background: #fff;
+}
+.swiper-gallery .close-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	color: #fff;
+	font-family: serif;
+	font-size: 70px;
+	cursor: pointer;
+	box-sizing: content-box;
+	z-index: 30;
+	background-color: rgba(0, 0, 0, 0.5);
+}

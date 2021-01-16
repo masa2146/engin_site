@@ -1,0 +1,474 @@
+﻿/** Cookie Manager **/
+.cookieManagerQ-sm {
+  position: fixed;
+  z-index: 2000000;
+  bottom: -100px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  background: #666;
+  padding: 10px;
+  font-family: sans-serif;
+  line-height: 16px;
+  display: flex;
+  box-shadow: 0 6px 28px 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 6px 28px 0 rgba(0,0,0,.1);
+  -moz-box-shadow: 0 6px 28px 0 rgba(0,0,0,.1);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: bottom 1s linear,opacity 1s linear;
+}
+
+.cookie-sm-text {
+  margin-bottom: 10px;
+  width: 98%;
+}
+
+@media screen and (min-device-width: 1200px) {
+  .cookie-sm-text {
+    max-width: 55vw;
+    margin-bottom: 0;
+  }
+
+  .cookieManagerQ-sm {
+    flex-direction: row;
+  }
+
+  .cookieManagerQ-sm .cookie-cm-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+    .cookieManagerQ-sm .cookie-cm-buttons .cookieManagerQ-sm-accept {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+  .cookieManagerQ-sm-imprint {
+    width: 47%;
+  }
+
+  .cookieManagerQ-sm-cookieSettings {
+    width: 47%;
+  }
+}
+
+.cookie-sm-text p {
+  font-size: 12px !important;
+  color: #fff;
+  text-align: center;
+  margin: 0 10px 0 0;
+  letter-spacing: 0.85px;
+  line-height:1.5;
+}
+.cookie-sm-text a, .cookie-sm-text a:hover {
+  text-decoration: underline;
+  color: #fff;
+  background:none;
+}
+
+.cookieManagerQ-sm .cookie-cm-buttons {
+  margin: 0 !important;
+  text-align: center !important;
+  font-size: 14px;
+}
+
+.cookieManagerQ-sm .cookie-cm-buttons button,
+.cookieManagerQ-sm .cookie-cm-buttons a {
+  padding: 5px 10px;
+  background: linear-gradient(to bottom, #FEFEFE, #F4F4F4) repeat scroll 0 0 #F3F3F3;
+  border-color: #bbbbbb;
+  color: #333333;
+  -moz-box-sizing: border-box;
+  border-radius: 3px 3px 3px 3px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  outline: none;
+  margin: 0 5px 0 0;
+}
+
+.cookieManagerQ-sm .cookie-cm-buttons a {
+  text-decoration: none;
+  color: #333333;
+}
+
+@media screen and (max-device-width: 768px) {
+  .cookieManagerQ-sm {
+    width: auto;
+  }
+
+  .cookie-sm-text p {
+    margin: 0;
+  }
+
+  .cookieManagerQ-sm .cookie-cm-buttons {
+    font-size: 12px;
+  }
+}
+
+.cookieManagerQ-md {
+  position: fixed;
+  z-index: 2000000;
+  bottom: 20px;
+  left: 20px;
+  color: #333;
+  width: 365px;
+  height: auto;
+  max-height: 90vh;
+  background: #fafafa;
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  font-family: sans-serif;
+  line-height: 18px;
+  -webkit-box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.cookieManagerQ-md .cookieManager-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.cookieManagerQ-md .cookieManager-description {
+  line-height: 1.5;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.cookieManagerQ-md .cookieManager-gtm-info {
+  width: 100%;
+}
+
+.cookieManagerQ-md .cookieManager-gtm-info ul {
+  list-style-type: disc;
+  margin-left: 0;
+  font-weight: normal;
+}
+
+.cookieManagerQ-xl {
+  position: fixed;
+  z-index: 2000000;
+  bottom: 20px;
+  left: 20px;
+  width: 750px;
+  height: auto;
+  color: #333;
+  top: 200px;
+  background: #FAFAFA;
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  font-family: sans-serif;
+  line-height: 1.5;
+  -webkit-box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.cookieManagerQ-md, .cookieManagerQ-xl {
+  overflow-y: auto;
+}
+
+.cookieManagerQ-xl #cookieManagerContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+.cookieManagerQ-xl #cookieManagerHeader {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.cookieManagerQ-xl #cookieManagerHeader .btnBack {
+  font-size: 20px;
+  margin: 0 5px 0 0;
+}
+
+.cookieManagerQ-xl #cookieManagerMain {
+  display: flex;
+  height: 0;
+  flex: 1 1 auto;
+}
+
+.cookieManagerQ-xl #cookieManagerSidebar {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex: 1 0 auto;
+  padding: 0 15px 0 0;
+  border-right: 1px solid;
+}
+
+.cookieManagerQ-xl #cookieManagerSidebar .cookieManager-menu {
+  margin: 0 0 0;
+  padding: 0 0 0;
+  list-style: none;
+}
+
+.cookieManagerQ-xl #cookieManagerSidebar .cookieManager-menu .cookieManager-menu-item {
+  padding: 5px 0;
+}
+
+.cookieManagerQ-xl #cookieManagerSidebar .cookieManager-menu .cookieManager-menu-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.cookieManagerQ-xl #cookieManagerContent {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 15px;
+}
+
+.cookieManagerQ-xl #cookieManagerContent ul {
+  list-style-type: disc;
+}
+
+.cookieManagerQ-xl #cookieManagerContent .cookieManager-gtm-headline {
+  font-weight: bold;
+  padding: 0 0 5px 15px;
+}
+
+.cookieManagerQ-xl .cookieManager-subtitle {
+  font-size: 16px;
+  border-bottom: 1px solid;
+  padding: 0;
+  margin: 10px 0;
+}
+
+#cookieManagerContainer .cookieManager-check input[type="checkbox"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+}
+
+#cookieManagerContainer .cookieManager-check input[type="checkbox"] {
+  height: 14px;
+  width: 28px;
+  border-radius: 2px;
+  margin: 10px 1ch 10px 0;
+  box-shadow: inset -1em -1px 0px -1px #ddd, inset -1em 0 0 0 #ccc;
+  background-color: white;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#cookieManagerContainer .cookieManager-check input[type="checkbox"][disabled] {
+  cursor: not-allowed;
+  filter: contrast(0.3) brightness(1.5);
+}
+
+#cookieManagerContainer .cookieManager-check input[type="checkbox"]:checked {
+  box-shadow: inset 14px 0px 0px -1px #666;
+}
+
+#cookieManagerContainer .cookieManager-check input[type="checkbox"]:focus {
+  outline: none;
+}
+
+.cookieManagerQ-xl #cookieManagerContainer .cookieManager-title {
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 0;
+}
+
+.cookieManagerQ-xl #cookieManagerContent .cookieManager-text {
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+.cookieManagerQ-xl #cookieManagerContent .cookieManager-text a {
+  color: #333;
+  text-decoration: underline;
+}
+
+#cookieManagerContainer .cookieManager-wrapper {
+  justify-content: space-between;
+}
+
+#cookieManagerContainer .cookieManager-wrapper, #cookieManagerContainer .cookieManager-check {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-wrap: wrap;
+  font-weight: bold;
+  margin: 0;
+}
+
+#cookieManagerContainer .cookieManager-wrapper .cookieManager-button button,
+#cookieManagerContainer .cookieManager-check .cookieManager-button button {
+  padding: 0;
+}
+
+#cookieManagerContainer .cookieManager-wrapper .cookieManager-gtm-info,
+#cookieManagerContainer .cookieManager-check .cookieManager-gtm-info {
+  margin-left: 20px;
+}
+
+#cookieManagerContainer .cookieManager-all {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+#cookieManagerContainer .cookieManager-all input[type="checkbox"] {
+  height: 18px;
+}
+
+_:-ms-fullscreen, :root #cookieManagerContainer .cookieManager-check input[type=checkbox] {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+_:-ms-fullscreen:checked, :root #cookieManagerContainer .cookieManager-check input[type=checkbox]:checked {
+  box-shadow: none;
+}
+
+.cookieManager-save .btn,
+.cookieManagerQ-md .btnInfo,
+.cookieManagerQ-xl .btnBack {
+  width: 100%;
+  padding: 7px;
+  background: linear-gradient(to bottom, #FEFEFE, #F4F4F4) repeat scroll 0 0 #F3F3F3;
+  border-color: #bbbbbb;
+  color: #333;
+  -moz-box-sizing: border-box;
+  border-radius: 3px 3px 3px 3px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  outline: none;
+  font-size: 14px;
+}
+
+.cookieManager-save .btn {
+  margin-top: 15px;
+  background: linear-gradient(to bottom, #666, #4d4d4d) repeat scroll 0 0 #F3F3F3;
+  color: #fff;
+}
+
+.cookieManager-save .btn:hover {
+  color: #fff;
+}
+
+.cookieManagerQ-md .btnInfo {
+  width: 25px;
+  height: 25px;
+}
+
+.cookieManagerQ-md .btnInfo::before {
+  content: "\2139";
+  font-family: "Times New Roman", Times, Georgia;
+  font-size: 14px;
+}
+
+.cookieManagerQ-md .cookieManager-category {
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.cookieManagerQ-xl .btnBack {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  margin-right: 10px;
+  padding: 0;
+  content: "\276E";
+}
+
+.cookieManagerQ-xl .btnBack::before {
+  content: "\276E";
+}
+
+.cookieManagerQ-sm-show {
+  bottom: 0;
+  opacity: 1;
+}
+
+.cookieManagerQ-show {
+  opacity: 1;
+}
+
+@media screen and (max-device-width: 768px) {
+  .cookieManagerQ-xl {
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: auto;
+  }
+}
+
+@media screen and (max-device-width: 578px) {
+  .cookieManagerQ-xl, .cookieManagerQ-md {
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    font-size: 12px !important;
+    max-height: 100%;
+    width: auto;
+  }
+
+  .cookieManagerQ-xl #cookieManagerContent, .cookieManagerQ-md #cookieManagerContent {
+    padding: 0;
+  }
+
+  .cookieManagerQ-xl #cookieManagerContent .cookieManager-text, .cookieManagerQ-md #cookieManagerContent .cookieManager-text {
+    padding: 0;
+  }
+
+  .cookieManagerQ-xl #cookieManagerSidebar, .cookieManagerQ-md #cookieManagerSidebar {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cookieManagerQ-md .cookieManager-check {
+    margin: 0;
+  }
+
+  .cookieManagerQ-xl #cookieManagerHeader .cookieManager-backToOverview {
+    line-height: 1.5;
+  }
+
+  .cookieManagerQ-xl #cookieManagerMain {
+    display: block;
+    overflow-y: auto;
+  }
+
+  .cookieManagerQ-xl #cookieManagerFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .cookieManagerQ-xl #cookieManagerFooter .cookieManager-backToTop a {
+    text-decoration: none;
+  }
+}
